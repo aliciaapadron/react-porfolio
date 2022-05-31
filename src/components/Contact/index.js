@@ -1,40 +1,42 @@
-import { useEffect, useState } from "react";
-import Loader from "react-loaders";
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import AnimatedLetters from "../AnimatedLetters";
-import "./index.scss";
+import { useEffect, useState } from 'react'
+import Loader from 'react-loaders'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import AnimatedLetters from '../AnimatedLetters'
+import './index.scss'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState("text-animate");
-  const form = useRef();
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const form = useRef()
+
+  const timer = setTimeout(() => {
+    setLetterClass('text-animate-hover')
+  }, 3000)
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass("text-animate-hover");
-    }, 3000);
-  }, []);
+    return () => timer
+  }, [timer])
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     emailjs
       .sendForm(
-        "service_5y8nf8s",
-        "template_d7fqplc",
+        'service_5y8nf8s',
+        'template_d7fqplc',
         form.current,
-        "NB8WFB2S91crerp5V"
+        'NB8WFB2S91crerp5V'
       )
       .then(
         () => {
-          alert("Mensaje enviado con éxito.");
-          window.location.reload(false);
+          alert('Mensaje enviado con éxito.')
+          window.location.reload(false)
         },
         () => {
-          alert("Error al enviar mensaje, por favor, inténtalo de nuevo");
+          alert('Error al enviar mensaje, por favor, inténtalo de nuevo')
         }
-      );
-  };
+      )
+  }
 
   return (
     <>
@@ -43,7 +45,7 @@ const Contact = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={["C", "o", "n", "t", "á", "c", "t", "a ", "m", "e"]}
+              strArray={['C', 'o', 'n', 't', 'á', 'c', 't', 'a ', 'm', 'e']}
               idx={15}
             />
           </h1>
@@ -96,7 +98,7 @@ const Contact = () => {
       </div>
       <Loader type="pacman" />
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 import {
   faNodeJs,
   faCss3,
@@ -6,21 +6,22 @@ import {
   faHtml5,
   faJsSquare,
   faReact,
-} from "@fortawesome/free-brands-svg-icons";
-import Loader from "react-loaders";
-import AnimatedLetters from "../AnimatedLetters";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./index.scss";
+} from '@fortawesome/free-brands-svg-icons'
+import Loader from 'react-loaders'
+import AnimatedLetters from '../AnimatedLetters'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './index.scss'
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState("text-animate");
+  const [letterClass, setLetterClass] = useState('text-animate')
+
+  const timer = setTimeout(() => {
+    setLetterClass('text-animate-hover')
+  }, 3000)
 
   useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass("text-animate-hover");
-    }, 3000);
-  }, []);
-
+    return () => timer
+  }, [timer])
   return (
     <>
       <div className="container about-page">
@@ -28,7 +29,7 @@ const About = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={["S", "o", "b", "r", "e", " ", "m", "i"]}
+              strArray={['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i']}
               idx={15}
             />
           </h1>
@@ -75,7 +76,7 @@ const About = () => {
       </div>
       <Loader type="pacman" />
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About
