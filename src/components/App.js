@@ -1,9 +1,9 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Layout from "./components/Layout";
-import "./App.scss";
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+import Layout from './Layout'
+import '../styles/App.scss'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </Route>
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

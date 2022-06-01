@@ -1,14 +1,20 @@
 .logo-container {
-  z-index: 0;
-  width: 400px;
-  height: 609px;
+  width: 356px;
+  height: 260px;
   position: absolute;
   top: 0;
-  right: 15%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 25%;
   bottom: 0;
   left: auto;
   margin: auto;
-
+  @include tablet() {
+    width: 400px;
+    height: 609px;
+    right: 24%;
+  }
   svg {
     width: 100%;
     height: auto;
@@ -17,20 +23,25 @@
   }
 
   .solid-logo {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    transform: rotateZ(30deg) !important;
+    margin-left: 246px;
+    width: 50%;
     z-index: 1;
     animation: fadeIn 10s;
     -webkit-animation: fadeIn 5s;
     -moz-animation: fadeIn 5s;
     -o-animation: fadeIn 5s;
     -ms-animation: fadeIn 5s;
+    @include tablet() {
+      margin: 0;
+      transform: rotateZ(30deg) !important;
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: 0;
+      margin: auto;
+      width: 100%;
+    }
   }
   @keyframes fadeIn {
     0% {

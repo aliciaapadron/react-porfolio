@@ -9,16 +9,20 @@
   }
 
   h1 {
+    font-size: 21px;
+    line-height: 28px;
     color: rgb(150, 124, 129);
-    font-size: 44px;
-    line-height: 43px;
     margin: 0;
-    font-family: "Coolvetica";
+    font-family: 'Coolvetica';
     font-weight: 400;
+    @include tablet() {
+      font-size: 44px;
+      line-height: 43px;
+    }
 
     &:before {
-      content: "<h1>";
-      font-family: "La Belle Aurore", cursive;
+      content: '<h1>';
+      font-family: 'La Belle Aurore', cursive;
       color: rgb(230, 119, 75);
       font-size: 18px;
       position: absolute;
@@ -28,8 +32,8 @@
     }
 
     &:after {
-      content: "<h1/>";
-      font-family: "La Belle Aurore", cursive;
+      content: '<h1/>';
+      font-family: 'La Belle Aurore', cursive;
       color: rgb(230, 119, 75);
       font-size: 18px;
       position: absolute;
@@ -51,12 +55,15 @@
 
   h2 {
     color: #8d8d8d;
-    margin-top: 20px;
+    margin-top: 40px;
     font-weight: 400;
     font-size: 11px;
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
+    @include tablet() {
+      margin-top: 20px;
+    }
   }
 
   .flat-button {

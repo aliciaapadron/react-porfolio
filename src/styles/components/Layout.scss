@@ -10,12 +10,20 @@
 }
 
 .tags {
+  bottom: 0;
+  height: 28%;
+  left: 46px;
+  font-size: 15px;
   color: #4d4d4e;
   position: absolute;
   bottom: 0;
-  left: 120px;
+  left: 40px;
   font-size: 18px;
-  font-family: "La Belle Aurore", cursive;
+  font-family: 'La Belle Aurore', cursive;
+  @include tablet() {
+    left: 120px;
+    font-size: 18px;
+  }
 }
 
 .bottom-tag-html {
@@ -25,7 +33,7 @@
 .container {
   width: 100%;
   will-change: contents;
-  height: 90%;
+  height: 75%;
   min-height: 566px;
   position: absolute;
   opacity: 0;
@@ -35,33 +43,42 @@
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
+  @include tablet() {
+    height: 90%;
+  }
 }
 
 .container.contact-page,
 .container.about-page {
   .text-zone {
+    width: 75%;
     position: absolute;
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
-    width: 35%;
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
+    @include tablet() {
+      width: 35%;
+    }
 
     h1 {
-      font-size: 53px;
-      font-family: "Coolvetica";
+      font-size: 28px;
+      font-family: 'Coolvetica';
       color: #4d4d4e;
       font-weight: 400;
       margin-top: 0;
       position: relative;
       margin-bottom: 40px;
       left: -10px;
+      @include tablet() {
+        font-size: 53px;
+      }
 
       &:before {
-        content: "<h1>";
-        font-family: "La Belle Aurore", cursive;
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
         color: #4d4d4e;
         font-size: 18px;
         position: absolute;
@@ -72,8 +89,8 @@
       }
 
       &:after {
-        content: "<h1/>";
-        font-family: "La Belle Aurore", cursive;
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
         color: #4d4d4e;
         font-size: 18px;
         line-height: 18px;
