@@ -25,3 +25,58 @@ $primary-color: rgb(150, 113, 119);
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+.pacman > div:first-of-type {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid rgb(150, 113, 119);
+  border-left: 25px solid rgb(150, 113, 119);
+  border-bottom: 25px solid rgb(150, 113, 119);
+  border-radius: 25px;
+  animation: rotate_pacman_half_up 0.5s 0s infinite;
+  position: relative;
+  left: -30px;
+  bottom: 85px;
+  @include tablet() {
+    bottom: 0;
+  }
+}
+
+.pacman > div:nth-child(2) {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid rgb(150, 113, 119);
+  border-left: 25px solid rgb(150, 113, 119);
+  border-bottom: 25px solid rgb(150, 113, 119);
+  border-radius: 25px;
+  animation: rotate_pacman_half_down 0.5s 0s infinite;
+  margin-top: -50px;
+  position: relative;
+  left: -30px;
+  bottom: 85px;
+  @include tablet() {
+    bottom: 0;
+  }
+}
+.pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6) {
+  background-color: rgb(150, 113, 119);
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: translate(0, -6.25px);
+  top: -60px;
+  left: 70px;
+
+  @include tablet() {
+    top: 25px;
+  }
+}

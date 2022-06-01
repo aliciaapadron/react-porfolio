@@ -1,5 +1,12 @@
 .stage-cube-cont {
-  display: none;
+  width: 0;
+  height: 0;
+  top: 0;
+  padding-top: 18%;
+  margin-left: 0;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
   @include tablet() {
     width: 50%;
     height: 100%;
