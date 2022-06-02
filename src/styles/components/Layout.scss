@@ -80,13 +80,17 @@
       &:before {
         content: '<h1>';
         font-family: 'La Belle Aurore', cursive;
-        color: rgb(230, 119, 75);
+        color: rgb(250, 157, 120);
         font-size: 12px;
         position: absolute;
         margin-top: -14px;
         left: -11px;
-        opacity: 0.6;
         line-height: 18px;
+        animation: fadeIn 5s;
+        -webkit-animation: fadeIn 5s;
+        -moz-animation: fadeIn 5s;
+        -o-animation: fadeIn 5s;
+        -ms-animation: fadeIn 5s;
         @include tablet() {
           color: #4d4d4e !important;
           font-size: 18px;
@@ -97,14 +101,18 @@
       &:after {
         content: '<h1/>';
         font-family: 'La Belle Aurore', cursive;
-        color: rgb(230, 119, 75);
+        color: rgb(250, 157, 120);
         font-size: 12px;
         line-height: 18px;
         position: absolute;
         left: -30px;
         bottom: -13px;
         margin-left: 20px;
-        opacity: 0.6;
+        animation: fadeIn 5s;
+        -webkit-animation: fadeIn 5s;
+        -moz-animation: fadeIn 5s;
+        -o-animation: fadeIn 5s;
+        -ms-animation: fadeIn 5s;
         @include tablet() {
           color: #4d4d4e;
           font-size: 18px;
