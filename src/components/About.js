@@ -39,7 +39,7 @@ const About = () => {
           </p>
           <p align="LEFT">
             Soy una persona muy creativa, que le gusta siempre dar su toque a
-            todo lo que hace. Soy tranquila y muy trabjadora, además de
+            todo lo que hace. Soy tranquila y muy trabajadora, además de
             organizada y constante.
           </p>
           <p>
